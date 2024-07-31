@@ -1,7 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
-import { DarkTheme, LightTheme } from '../consts';
-import { getCachedTheme, setCachedTheme } from './utils';
+import { DarkTheme, LightTheme } from '../../consts';
+import { getCachedTheme, setCachedTheme } from '../utils';
 
 type ThemeScopeProps = {
   children: React.ReactNode;
