@@ -46,8 +46,8 @@ export const authSlice = createSlice({
       )
       .addMatcher(
         isAnyOf(login.matchFulfilled, registration.matchFulfilled, refresh.matchFulfilled),
-        (state) => {
-          state.user = initialState.user;
+        (state, action) => {
+          state.user = action.payload.user;
           state.isAuthenticating = false;
           state.isAuthenticated = true;
         },
