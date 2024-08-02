@@ -3,14 +3,14 @@ import { api } from '../api';
 
 export const authService = api.injectEndpoints({
   endpoints: (build) => ({
-    login: build.mutation<{ email: string; password: string }, AuthResponse>({
+    login: build.mutation<AuthResponse, { email: string; password: string }>({
       query: (userData) => ({
         url: '/login',
         method: 'POST',
         body: userData,
       }),
     }),
-    registration: build.mutation<{ email: string; password: string; name: string }, AuthResponse>({
+    registration: build.mutation<AuthResponse, { email: string; password: string }>({
       query: (userData) => ({
         url: '/registration',
         method: 'POST',
@@ -24,7 +24,7 @@ export const authService = api.injectEndpoints({
         body: userData,
       }),
     }),
-    refresh: build.query<void, AuthResponse>({
+    refresh: build.query<AuthResponse, void>({
       query: () => ({
         url: '/refresh',
         method: 'GET',
