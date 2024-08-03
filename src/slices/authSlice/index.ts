@@ -1,5 +1,6 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
 import { authService } from '../../api';
+import { RootState } from '../../app/store';
 import { User } from '../../types';
 
 type InitialState = {
@@ -61,3 +62,9 @@ export const authSlice = createSlice({
 });
 
 export default authSlice.reducer;
+
+export const selectUser = (state: RootState) => state.auth.user;
+
+export const selectIsAuthenticating = (state: RootState) => state.auth.isAuthenticating;
+
+export const selectIsAuthenticated = (state: RootState) => state.auth.isAuthenticated;
