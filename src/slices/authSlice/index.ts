@@ -53,7 +53,7 @@ export const authSlice = createSlice({
         },
       )
       .addMatcher(authService.endpoints.logout.matchFulfilled, (state) => {
-        state.user = initialState.user;
+        state.user = null;
         state.isAuthenticating = false;
         state.isAuthenticated = false;
       });

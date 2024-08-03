@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { API_URL } from '../consts/apiUrl';
+import { API_URL } from '../consts';
 
 export const api = createApi({
   reducerPath: 'splitApi',
