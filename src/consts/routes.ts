@@ -4,4 +4,5 @@ export const PublicRoutes = {
 
 export const PrivateRoutes = {
   Home: '/',
+  Tasks: '/tasks',
 };
