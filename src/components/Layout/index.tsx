@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import { Header, Sidebar } from '..';
 import { LayoutChildrenStyled, LayoutMainStyled } from './styled';
 import { getCachedOpen, setCachedOpen } from './utils';
 
 type LayoutProps = {
-  children: string;
+  children: ReactNode;
 };
 
 export const Layout = ({ children }: LayoutProps) => {
