@@ -26,6 +26,10 @@ export const MenuIconOpen = styled(Link)`
   transition: 0.2s ease;
 
   &:hover {
-    background: rgba(33, 23, 23, 0.156);
+    background: rgba(162, 162, 162, 0.305);
   }
+`;
+
+export const Toggler = styled.div`
+  margin-left: 1500px;
 `;

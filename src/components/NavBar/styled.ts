@@ -43,7 +43,7 @@ export const RouteLink = styled(Link)<{ $active: boolean }>`
   text-decoration: none;
   color: ${({ theme, $active }) => ($active ? theme.colors.buttonFont : theme.colors.primaryFont)};
   background: ${({ theme, $active }) => $active && theme.colors.buttonBg};
-  transition: ease 0.5s;
+  transition: 0.2s ease;
   width: 230px;
   height: 35px;
   text-align: center;
