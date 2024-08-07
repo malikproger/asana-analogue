@@ -1,5 +1,5 @@
 export { Header } from './Header';
 export { Layout } from './Layout';
 export { Logo } from './Logo';
-export { NavBar } from './NavBar';
+export { Sidebar } from './Sidebar';
 export { ThemeToggle } from './ThemeToggle';

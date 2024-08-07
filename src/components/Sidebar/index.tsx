@@ -4,11 +4,11 @@ import { tabRoutes } from './consts';
 import { RouteLink, RoutesList, SidebarStyled } from './styled';
 import { getActiveTabRoute } from './utils';
 
-type NavBarProps = {
+type SidebarProps = {
   open: boolean;
 };
 
-export const NavBar = ({ open }: NavBarProps) => {
+export const Sidebar = ({ open }: SidebarProps) => {
   const { pathname } = useLocation();
   const [activeTabRoute, setActiveTabRoute] = useState(getActiveTabRoute(pathname));
 

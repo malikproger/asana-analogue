@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 export const HeaderStyled = styled.div`
   display: flex;
-  justify-content: start;
   align-items: center;
   position: relative;
   height: 3.5rem;

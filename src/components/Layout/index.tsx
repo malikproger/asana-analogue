@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Header } from '../Header';
-import { NavBar } from '../NavBar';
+import { Header, Sidebar } from '..';
 import { LayoutChildrenStyled, LayoutMainStyled } from './styled';
 import { getCachedOpen, setCachedOpen } from './utils';
 
@@ -19,7 +18,7 @@ export const Layout = ({ children }: LayoutProps) => {
     <LayoutMainStyled>
       <Header onSidebarToggle={() => setIsSidebarOpen((prev) => !prev)} />
       <LayoutChildrenStyled>
-        <NavBar open={isSidebarOpen} />
+        <Sidebar open={isSidebarOpen} />
         {children}
       </LayoutChildrenStyled>
     </LayoutMainStyled>
