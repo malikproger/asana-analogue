@@ -4,7 +4,7 @@ export const LoaderStyled = styled.div`
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 5px solid ${({ theme }) => theme.colors.icon};
+  border: 5px solid;
   animation: spinner-1 0.8s infinite linear alternate, spinner-2 1.6s infinite linear;
 
   @keyframes spinner-1 {
