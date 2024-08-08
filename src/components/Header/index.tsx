@@ -1,7 +1,7 @@
 import { FaBars } from 'react-icons/fa';
 import { Logo } from '../Logo';
 import { ThemeToggle } from '../ThemeToggle';
-import { HeaderStyled, MenuIconOpen, Toggler } from './styled';
+import { HeaderStyled, LeftSide, MenuIconOpen } from './styled';
 
 type HeaderProps = {
   onSidebarToggle: () => void;
@@ -10,13 +10,13 @@ type HeaderProps = {
 export const Header = ({ onSidebarToggle }: HeaderProps) => {
   return (
     <HeaderStyled>
-      <MenuIconOpen to="#" onClick={onSidebarToggle}>
-        <FaBars />
-      </MenuIconOpen>
-      <Logo />
-      <Toggler>
-        <ThemeToggle />
-      </Toggler>
+      <LeftSide>
+        <MenuIconOpen to="#" onClick={onSidebarToggle}>
+          <FaBars />
+        </MenuIconOpen>
+        <Logo />
+      </LeftSide>
+      <ThemeToggle />
     </HeaderStyled>
   );
 };

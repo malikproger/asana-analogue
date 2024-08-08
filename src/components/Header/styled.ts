@@ -3,10 +3,12 @@ import styled from 'styled-components';
 
 export const HeaderStyled = styled.div`
   display: flex;
+  justify-content: space-between;
   align-items: center;
   position: relative;
   height: 3.5rem;
   gap: 40px;
+  padding: 0 30px;
   background-color: ${({ theme }) => theme.colors.primaryBg};
   box-shadow: ${({ theme }) => theme.colors.primaryBoxShadow};
   z-index: 99;
@@ -17,7 +19,6 @@ export const MenuIconOpen = styled(Link)`
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  margin-left: 2rem;
   color: ${({ theme }) => theme.colors.icon};
   border-radius: 6px;
   width: 30px;
@@ -29,6 +30,8 @@ export const MenuIconOpen = styled(Link)`
   }
 `;
 
-export const Toggler = styled.div`
-  margin-left: 1500px;
+export const LeftSide = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
 `;

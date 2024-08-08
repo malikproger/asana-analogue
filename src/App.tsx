@@ -2,8 +2,8 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { GlobalStyles } from './App.styled';
 import { store } from './app/store';
+import { Router as AppRouter } from './components';
 import { ThemeScope } from './scopes';
-import { Button } from './UI';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <ThemeScope>
         <Provider store={store}>
           <GlobalStyles />
-          <Button loading={true}>Кнопка</Button>
+          <AppRouter />
         </Provider>
       </ThemeScope>
     </BrowserRouter>

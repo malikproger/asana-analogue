@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Loader } from '../../UI';
 
 export const Layout = styled.div`
   display: flex;
@@ -7,3 +8,5 @@ export const Layout = styled.div`
   width: 100%;
   height: 100vh;
 `;
+
+export const AuthLoader = styled(Loader)``;

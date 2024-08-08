@@ -1,5 +1,9 @@
 import { LoaderStyled } from './styled';
 
-export const Loader = () => {
-  return <LoaderStyled />;
+type LoaderProps = {
+  className?: string;
+};
+
+export const Loader = ({ className }: LoaderProps) => {
+  return <LoaderStyled className={className}></LoaderStyled>;
 };

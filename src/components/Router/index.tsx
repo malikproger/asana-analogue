@@ -3,9 +3,8 @@ import { Navigate, Route, RouteProps, Routes } from 'react-router-dom';
 import { Layout as PrivatePageLayout } from '../../components';
 import { PrivateRoutes, PublicRoutes } from '../../consts';
 import { selectIsAuthenticated, selectIsAuthenticating } from '../../slices/authSlice';
-import { Loader } from '../../UI';
 import { privateRoutes, publicRoutes } from './consts';
-import { Layout } from './styled';
+import { AuthLoader, Layout } from './styled';
 
 export const Router = () => {
   const isAuthenticating = useSelector(selectIsAuthenticating);
@@ -46,7 +45,7 @@ export const Router = () => {
   if (isAuthenticating) {
     return (
       <Layout>
-        <Loader />
+        <AuthLoader />
       </Layout>
     );
   }
