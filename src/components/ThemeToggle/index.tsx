@@ -1,11 +1,24 @@
 import { useThemeScope } from '../../scopes/ThemeScope';
+import { Tooltip } from '../../UI';
 import { Moon, Sun, ThemeToggleStyled } from './styled';
 
-export const ThemeToggle = () => {
+type ThemeToggleProps = {
+  tooltipWithOffset?: boolean;
+};
+
+export const ThemeToggle = ({ tooltipWithOffset }: ThemeToggleProps) => {
   const { toggleTheme, isDarkTheme } = useThemeScope();
   return (
-    <ThemeToggleStyled onClick={toggleTheme} $isDark={isDarkTheme}>
-      {isDarkTheme ? <Sun /> : <Moon />}
-    </ThemeToggleStyled>
+    <Tooltip
+      width={150}
+      position="bottom"
+      text="Переключить тему"
+      offsetVertical={45}
+      offsetHorizontal={tooltipWithOffset ? 70 : undefined}
+    >
+      <ThemeToggleStyled onClick={toggleTheme} $isDark={isDarkTheme}>
+        {isDarkTheme ? <Sun /> : <Moon />}
+      </ThemeToggleStyled>
+    </Tooltip>
   );
 };

@@ -34,6 +34,8 @@ declare module 'styled-components' {
       placeholderFont: string;
       logo: string;
       separator: string;
+      tooltipBg: string;
+      tooltipFont: string;
     };
   }
 }

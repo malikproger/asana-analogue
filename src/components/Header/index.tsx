@@ -16,7 +16,7 @@ export const Header = ({ onSidebarToggle }: HeaderProps) => {
         </MenuIconOpen>
         <Logo />
       </LeftSide>
-      <ThemeToggle />
+      <ThemeToggle tooltipWithOffset />
     </HeaderStyled>
   );
 };

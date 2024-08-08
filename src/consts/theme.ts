@@ -33,6 +33,8 @@ export const DarkTheme = {
     placeholderFont: 'rgb(55, 55, 60)',
     logo: 'rgb(36, 36, 42)',
     separator: 'rgb(50, 50, 56)',
+    tooltipBg: 'lightgray',
+    tooltipFont: 'black',
   },
 };
 
@@ -65,5 +67,7 @@ export const LightTheme = {
     placeholderFont: 'rgb(165, 167, 180)',
     logo: 'white',
     separator: 'rgb(200, 200, 206)',
+    tooltipBg: 'gray',
+    tooltipFont: 'white',
   },
 };
