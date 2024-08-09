@@ -7,6 +7,7 @@ type TooltipStyleProps = {
   $offsetHorizontal?: number;
   $width?: number;
   $animationActive: boolean;
+  $rotate?: number;
 };
 
 export const TooltipWrapper = styled.div`
@@ -28,6 +29,21 @@ export const TooltipStyled = styled.div<TooltipStyleProps>`
   z-index: 1001;
   width: ${({ $width }) => `${$width}px`};
   text-align: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 65px;
+    top: -10px;
+    border: 10px solid transparent;
+    border-top: 10px solid ${({ theme }) => theme.colors.tooltipBg};
+    transform: ${({ $rotate }) => `rotate(${$rotate}deg)`};
+  }
+
+  &::after {
+    border-top: 10px solid ${({ theme }) => theme.colors.tooltipBg};
+    bottom: -19px;
+  }
 
   ${({ $animationActive }) =>
     $animationActive

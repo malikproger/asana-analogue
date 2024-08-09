@@ -10,6 +10,7 @@ export type TooltipProps = {
   position?: TooltipPositionType;
   offsetVertical?: number;
   offsetHorizontal?: number;
+  rotate?: number;
   children: ReactNode;
 };
 
@@ -21,6 +22,7 @@ export const Tooltip = ({
   offsetHorizontal,
   children,
   width,
+  rotate,
 }: TooltipProps) => {
   const [active, setActive] = useState(false);
   const [animationActive, setAnimationActive] = useState(false);
@@ -55,6 +57,7 @@ export const Tooltip = ({
           $offsetVertical={offsetVertical}
           $offsetHorizontal={offsetHorizontal}
           $animationActive={animationActive}
+          $rotate={rotate}
         >
           {text}
         </TooltipStyled>

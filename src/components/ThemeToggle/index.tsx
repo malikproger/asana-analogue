@@ -15,6 +15,7 @@ export const ThemeToggle = ({ tooltipWithOffset }: ThemeToggleProps) => {
       text="Переключить тему"
       offsetVertical={45}
       offsetHorizontal={tooltipWithOffset ? 70 : undefined}
+      rotate={95}
     >
       <ThemeToggleStyled onClick={toggleTheme} $isDark={isDarkTheme}>
         {isDarkTheme ? <Sun /> : <Moon />}
