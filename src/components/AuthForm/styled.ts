@@ -17,7 +17,6 @@ export const Heading = styled.h1`
 export const InputFormStyled = styled(Input)`
   width: 400px;
   height: 50px;
-  margin-top: 5px;
 `;
 
 export const ButtonFormStyled = styled(Button)`
