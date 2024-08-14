@@ -31,7 +31,6 @@ export const InputStyled = styled.input`
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
 
   ${Label} {
     font-size: 16px;
@@ -45,7 +44,7 @@ export const Wrapper = styled.div`
 export const LabelWrapper = styled.div`
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 100%;
   margin-bottom: 8px;
 `;

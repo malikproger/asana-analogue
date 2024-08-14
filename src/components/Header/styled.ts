@@ -33,5 +33,5 @@ export const MenuIconOpen = styled(Link)`
 export const LeftSide = styled.div`
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
 `;

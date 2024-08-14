@@ -38,11 +38,13 @@ export const TooltipStyled = styled.div<TooltipStyleProps>`
     border: 10px solid transparent;
     border-top: 10px solid ${({ theme }) => theme.colors.tooltipBg};
     transform: ${({ $rotate }) => `rotate(${$rotate}deg)`};
+    transition: 0.2s ease;
   }
 
   &::after {
     border-top: 10px solid ${({ theme }) => theme.colors.tooltipBg};
     bottom: -19px;
+    transition: 0.2s ease;
   }
 
   ${({ $animationActive }) =>

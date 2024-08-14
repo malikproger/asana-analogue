@@ -9,7 +9,7 @@ export const tabRoutes = [
   },
   {
     title: 'Мои задачи',
-    path: '/tasks',
+    path: '/myTasks',
     icon: <FaTasks />,
   },
 ];
