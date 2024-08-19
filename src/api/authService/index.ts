@@ -25,10 +25,20 @@ export const authService = api.injectEndpoints({
       }),
     }),
     refresh: build.query<AuthResponse, void>({
-      query: () => ({
-        url: '/refresh',
-        method: 'GET',
-      }),
+      queryFn: async (arg, api, extraOptions, baseQuery) => {
+        const token = localStorage.getItem('token');
+
+        if (!token) {
+          return { error: { status: 'CUSTOM_ERROR', data: 'Token not found' } };
+        }
+
+        const result = await baseQuery({
+          url: '/refresh',
+          method: 'GET',
+        });
+
+        return result;
+      },
     }),
   }),
 });

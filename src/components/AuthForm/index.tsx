@@ -55,8 +55,10 @@ export const AuthForm = () => {
     }
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
     try {
+      e.preventDefault();
+
       if (isInvalid) {
         return validate();
       }
@@ -77,7 +79,7 @@ export const AuthForm = () => {
   };
 
   return (
-    <AuthFormStyled>
+    <AuthFormStyled onSubmit={handleSubmit}>
       <Heading>{authType === 'sign-up' ? 'Создать аккаунт' : 'Войти в аккаунт'}</Heading>
       <InputFormStyled
         placeholder="Email"
@@ -116,7 +118,7 @@ export const AuthForm = () => {
           }}
         />
       )}
-      <ButtonFormStyled onClick={handleSubmit} loading={isSubmitting}>
+      <ButtonFormStyled type="submit" loading={isSubmitting}>
         {authType === 'sign-up' ? 'Зарегистрироваться' : 'Войти'}
       </ButtonFormStyled>
       <AuthLabel>

@@ -52,7 +52,7 @@ export const RouteLink = styled(Link)<{ $active: boolean }>`
   gap: 10px;
 
   &:hover {
-    background: ${({ theme }) => theme.colors.buttonHover};
+    background: ${({ theme, $active }) => !$active && theme.colors.buttonHover};
     color: ${({ theme }) => theme.colors.buttonFont};
   }
 `;

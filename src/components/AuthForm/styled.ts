@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Button, Input } from '../../UI';
 
-export const AuthFormStyled = styled.div`
+export const AuthFormStyled = styled.form`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,7 +22,14 @@ export const InputFormStyled = styled(Input)`
 export const ButtonFormStyled = styled(Button)`
   width: 400px;
   height: 50px;
+  font-size: 16px;
   margin-top: 20px;
+  background: ${({ theme }) => theme.colors.formButtonBg};
+  color: white;
+
+  &:hover {
+    background: ${({ theme }) => theme.colors.formButtonHover};
+  }
 `;
 
 export const AuthLabel = styled.div`

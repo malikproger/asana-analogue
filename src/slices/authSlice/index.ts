@@ -7,12 +7,14 @@ type InitialState = {
   user: User | null;
   isAuthenticating: boolean;
   isAuthenticated: boolean;
+  token: string | null;
 };
 
 const initialState: InitialState = {
   user: null,
   isAuthenticating: true,
   isAuthenticated: false,
+  token: localStorage.getItem('token'),
 };
 
 const { login, registration, logout, refresh } = authService.endpoints;
@@ -51,12 +53,16 @@ export const authSlice = createSlice({
           state.user = action.payload.user;
           state.isAuthenticating = false;
           state.isAuthenticated = true;
+          state.token = action.payload.accessToken;
+          localStorage.setItem('token', action.payload.accessToken);
         },
       )
       .addMatcher(authService.endpoints.logout.matchFulfilled, (state) => {
         state.user = null;
         state.isAuthenticating = false;
         state.isAuthenticated = false;
+        state.token = null;
+        localStorage.removeItem('token');
       });
   },
 });

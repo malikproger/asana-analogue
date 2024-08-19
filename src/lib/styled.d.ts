@@ -23,6 +23,8 @@ declare module 'styled-components' {
       secondaryFont: string;
       secondaryLightFont: string;
       inputHover: string;
+      formButtonBg: string;
+      formButtonHover: string;
       buttonBg: string;
       buttonFont: string;
       buttonHover: string;

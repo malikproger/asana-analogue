@@ -9,6 +9,7 @@ export const store = configureStore({
     auth,
     task,
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(api.middleware),
 });
 
 export type AppDispatch = typeof store.dispatch;

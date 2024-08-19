@@ -7,6 +7,8 @@ export const Layout = styled.div`
   align-items: center;
   width: 100%;
   height: 100vh;
+  transition: 0.2s ease;
+  background: ${({ theme }) => theme.colors.mainBg};
 `;
 
 export const AuthLoader = styled(Loader)``;
