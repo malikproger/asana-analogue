@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { Button, Input } from '../../UI';
+import styled from 'styled-components'
+import { Button, Input } from '../../UI'
 
 export const AuthFormStyled = styled.form`
   display: flex;

@@ -38,6 +38,7 @@ declare module 'styled-components' {
       separator: string;
       tooltipBg: string;
       tooltipFont: string;
+      tooltipContentHover: string;
     };
   }
 }

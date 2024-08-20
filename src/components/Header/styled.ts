@@ -1,3 +1,4 @@
+import { FaUserLarge } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -34,4 +35,19 @@ export const LeftSide = styled.div`
   display: flex;
   align-items: center;
   gap: 30px;
+`;
+
+export const RightSide = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+`;
+
+export const UserIcon = styled(FaUserLarge)`
+  margin-top: 10px;
+  transition: 0.2s ease;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  color: ${({ theme }) => theme.colors.primaryFont};
 `;

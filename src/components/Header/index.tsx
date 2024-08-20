@@ -1,7 +1,9 @@
 import { FaBars } from 'react-icons/fa';
+import { Tooltip } from '../../UI';
 import { Logo } from '../Logo';
 import { ThemeToggle } from '../ThemeToggle';
-import { HeaderStyled, LeftSide, MenuIconOpen } from './styled';
+import { UserTooltipContent } from './components';
+import { HeaderStyled, LeftSide, MenuIconOpen, RightSide, UserIcon } from './styled';
 
 type HeaderProps = {
   onSidebarToggle: () => void;
@@ -16,7 +18,22 @@ export const Header = ({ onSidebarToggle }: HeaderProps) => {
         </MenuIconOpen>
         <Logo />
       </LeftSide>
-      <ThemeToggle tooltipWithOffset />
+      <RightSide>
+        <ThemeToggle tooltipWithOffset />
+        <Tooltip
+          text={<UserTooltipContent />}
+          width={150}
+          offsetVertical={62}
+          offsetHorizontal={78}
+          type="click"
+          position="bottom"
+          rotate={180}
+          arrowLeft={106}
+          arrowTop={-20}
+        >
+          <UserIcon />
+        </Tooltip>
+      </RightSide>
     </HeaderStyled>
   );
 };

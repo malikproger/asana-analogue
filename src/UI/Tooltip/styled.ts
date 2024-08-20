@@ -8,6 +8,8 @@ type TooltipStyleProps = {
   $width?: number;
   $animationActive: boolean;
   $rotate?: number;
+  $arrowLeft?: number;
+  $arrowTop?: number;
 };
 
 export const TooltipWrapper = styled.div`
@@ -24,6 +26,7 @@ export const TooltipStyled = styled.div<TooltipStyleProps>`
   padding: 8px;
   color: ${({ theme }) => theme.colors.tooltipFont};
   background: ${({ theme }) => theme.colors.tooltipBg};
+  box-shadow: ${({ theme }) => theme.colors.primaryBoxShadow};
   font-size: 14px;
   line-height: 1;
   z-index: 1001;
@@ -33,8 +36,8 @@ export const TooltipStyled = styled.div<TooltipStyleProps>`
   &::before {
     content: '';
     position: absolute;
-    left: 65px;
-    top: -10px;
+    left: ${({ $arrowLeft }) => `${$arrowLeft}px`};
+    top: ${({ $arrowTop }) => `${$arrowTop}px`};
     border: 10px solid transparent;
     border-top: 10px solid ${({ theme }) => theme.colors.tooltipBg};
     transform: ${({ $rotate }) => `rotate(${$rotate}deg)`};
